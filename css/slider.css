@@ -1,0 +1,109 @@
+/*Slider*/
+#diapo{
+    position:relative;
+    height:30em;
+    margin:auto;
+    text-align:center;
+    margin: 2em 2em;
+    margin-bottom: -55px;
+}
+#diapo div{
+    display:inline-block;
+}
+#diapo > * + *{
+    margin-left:5px;
+}
+.big_image{
+    position:absolute;
+    display:block;
+    width:600px;
+    top:100px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    opacity:0;
+    border: 2px solid #FFF;
+    box-shadow: 0 2px 8px 2px #666;
+
+    -webkit-transform:scale(0.25);
+    -moz-transform:scale(0.25);
+    -ms-transform:scale(0.25);
+    -o-transform:scale(0.25);
+    transform:scale(0.25);
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.r_check, .on_check{
+    cursor: pointer;
+}
+.r_check:checked ~ label img{
+    opacity:0.25;
+    border:2px solid #006699;
+
+    text-align: center;
+}
+.r_check:checked ~ .big_image {
+    opacity:1;
+
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+
+    width: 40%;
+    margin-left: 350px;
+}
+.r_check{
+    /*  display:none;/* si masquer pas acces avec touche */
+    opacity:0;
+    position:absolute;
+}
+label img.vignette{
+    width:100px;
+
+    border:2px solid #FFF;
+
+    margin-top: -10px;
+}
+.retour{
+    color:#909090;
+    font-size:1em;
+    left:1em;
+    bottom:1em;
+    position:fixed;
+    text-decoration:none;
+    font-style:italic;
+    text-shadow:1px 1px 0 #FFF;
+}
+.retour:hover{
+    font-style:normal;
+    color:#706040;
+}
+
+@media screen and (max-width: 777px){
+    .r_check:checked ~ .big_image{
+        margin-left: 200px;
+        margin-top: 90px;
+    }
+}
+@media (min-width: 778px) and (max-width: 991px){
+    .r_check:checked ~ .big_image{
+        margin-left: 200px;
+        margin-top: 90px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+
+    /**/
+    .r_check:checked ~ .big_image{
+        margin-left: 270px;
+    }
+}
+/*Slider*/
+
+
